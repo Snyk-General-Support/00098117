@@ -8,6 +8,8 @@ jobs:
       - name: Run Snyk to check Kubernetes manifest file for issues
         uses: snyk/actions/iac@master
         continue-on-error: true
+        with: 
+          sarif: true
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       - name: Upload result to GitHub Code Scanning
