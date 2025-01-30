@@ -10,10 +10,10 @@ jobs:
         continue-on-error: true
         with: 
           sarif: true
-          args: --sarif-file-output=snyk.arif
+          args: --sarif-file-output=snykresults.sarif
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       - name: Upload result to GitHub Code Scanning
         uses: github/codeql-action/upload-sarif@v2
         with:
-          sarif_file: snyk.sarif
+          sarif_file: snykresults.sarif
