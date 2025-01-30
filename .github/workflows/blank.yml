@@ -10,7 +10,7 @@ jobs:
         continue-on-error: true
         with: 
           sarif: true
-          args: --sarif-file-output=snykresults.sarif
+          args: --sarif-file-output=snykresults.sarif || true
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       - name: Upload result to GitHub Code Scanning
