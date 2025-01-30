@@ -1,5 +1,7 @@
 name: Ticket Test
 on: push
+permissions:
+  security-events: write
 jobs:
   security:
     runs-on: ubuntu-latest
