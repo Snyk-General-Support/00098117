@@ -1,0 +1,792 @@
+
+joshua@Joshuas-MBP terraform-goof % snyk container test 76588:latest --platform=linux/arm64 --exclude-base-image-vulns
+
+Testing 76588:latest...
+
+✗ Low severity vulnerability found in systemd
+  Description: CVE-2023-7008
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-SYSTEMD-6137855
+  Introduced through: systemd/libnss-systemd@249.11-0ubuntu3.12, systemd/systemd-timesyncd@249.11-0ubuntu3.12, firefox@1:1snap1-0ubuntu2, software-properties/software-properties-common@0.99.22.9, systemd-hwe/systemd-hwe-hwdb@249.11.5, systemd/libsystemd0@249.11-0ubuntu3.12, systemd/libudev1@249.11-0ubuntu3.12
+  From: systemd/libnss-systemd@249.11-0ubuntu3.12 > systemd@249.11-0ubuntu3.12
+  From: systemd/systemd-timesyncd@249.11-0ubuntu3.12 > systemd@249.11-0ubuntu3.12
+  From: firefox@1:1snap1-0ubuntu2 > snapd@2.63+22.04ubuntu0.1 > systemd@249.11-0ubuntu3.12
+  and 12 more...
+  Image layer: 'apt-get install -y firefox'
+
+✗ Low severity vulnerability found in snapd
+  Description: CVE-2024-5138
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-SNAPD-7173523
+  Introduced through: firefox@1:1snap1-0ubuntu2
+  From: firefox@1:1snap1-0ubuntu2 > snapd@2.63+22.04ubuntu0.1
+  Image layer: 'apt-get install -y firefox'
+
+✗ Low severity vulnerability found in shadow/login
+  Description: Arbitrary Code Injection
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-SHADOW-5425688
+  Introduced through: shadow/login@1:4.8.1-2ubuntu2.2, shadow/passwd@1:4.8.1-2ubuntu2.2
+  From: shadow/login@1:4.8.1-2ubuntu2.2
+  From: shadow/passwd@1:4.8.1-2ubuntu2.2
+
+✗ Low severity vulnerability found in python3.10/libpython3.10-minimal
+  Description: Inefficient Regular Expression Complexity
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-PYTHON310-7830347
+  Introduced through: python3.10/libpython3.10-minimal@3.10.12-1~22.04.5, python3.10/libpython3.10-stdlib@3.10.12-1~22.04.5, python3.10/python3.10-minimal@3.10.12-1~22.04.5, software-properties/software-properties-common@0.99.22.9
+  From: python3.10/libpython3.10-minimal@3.10.12-1~22.04.5
+  From: python3.10/libpython3.10-stdlib@3.10.12-1~22.04.5
+  From: python3.10/python3.10-minimal@3.10.12-1~22.04.5
+  and 1 more...
+  Fixed in: 3.10.12-1~22.04.6
+
+✗ Low severity vulnerability found in python-httplib2/python3-httplib2
+  Description: Resource Exhaustion
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-PYTHONHTTPLIB2-2784078
+  Introduced through: software-properties/software-properties-common@0.99.22.9
+  From: software-properties/software-properties-common@0.99.22.9 > software-properties/python3-software-properties@0.99.22.9 > python-launchpadlib/python3-launchpadlib@1.10.16-1 > python-httplib2/python3-httplib2@0.20.2-2
+  From: software-properties/software-properties-common@0.99.22.9 > software-properties/python3-software-properties@0.99.22.9 > python-launchpadlib/python3-launchpadlib@1.10.16-1 > lazr.restfulclient/python3-lazr.restfulclient@0.14.4-1 > python-httplib2/python3-httplib2@0.20.2-2
+
+✗ Low severity vulnerability found in policykit-1/libpolkit-agent-1-0
+  Description: Improper Encoding or Escaping of Output
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-POLICYKIT1-2794742
+  Introduced through: software-properties/software-properties-common@0.99.22.9
+  From: software-properties/software-properties-common@0.99.22.9 > packagekit@1.2.5-2ubuntu2 > policykit-1@0.105-33 > policykit-1/pkexec@0.105-33 > policykit-1/libpolkit-agent-1-0@0.105-33
+  From: software-properties/software-properties-common@0.99.22.9 > packagekit@1.2.5-2ubuntu2 > policykit-1@0.105-33 > policykit-1/pkexec@0.105-33 > policykit-1/polkitd@0.105-33 > policykit-1/libpolkit-agent-1-0@0.105-33
+  From: software-properties/software-properties-common@0.99.22.9 > packagekit@1.2.5-2ubuntu2 > policykit-1/libpolkit-gobject-1-0@0.105-33
+  and 7 more...
+
+✗ Low severity vulnerability found in pcre3/libpcre3
+  Description: Uncontrolled Recursion
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-PCRE3-2799820
+  Introduced through: pcre3/libpcre3@2:8.39-13ubuntu0.22.04.1
+  From: pcre3/libpcre3@2:8.39-13ubuntu0.22.04.1
+
+✗ Low severity vulnerability found in pcre2/libpcre2-8-0
+  Description: Integer Overflow or Wraparound
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-PCRE2-5787133
+  Introduced through: pcre2/libpcre2-8-0@10.39-3ubuntu0.1
+  From: pcre2/libpcre2-8-0@10.39-3ubuntu0.1
+
+✗ Low severity vulnerability found in ncurses/libncurses6
+  Description: CVE-2023-50495
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-NCURSES-6123867
+  Introduced through: ncurses/libncurses6@6.3-2ubuntu0.1, procps@2:3.3.17-6ubuntu2.1, ncurses/libncursesw6@6.3-2ubuntu0.1, ncurses/libtinfo6@6.3-2ubuntu0.1, ncurses/ncurses-base@6.3-2ubuntu0.1, ncurses/ncurses-bin@6.3-2ubuntu0.1
+  From: ncurses/libncurses6@6.3-2ubuntu0.1
+  From: procps@2:3.3.17-6ubuntu2.1 > ncurses/libncurses6@6.3-2ubuntu0.1
+  From: ncurses/libncursesw6@6.3-2ubuntu0.1
+  and 3 more...
+
+✗ Low severity vulnerability found in ncurses/libncurses6
+  Description: CVE-2023-45918
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-NCURSES-6253015
+  Introduced through: ncurses/libncurses6@6.3-2ubuntu0.1, procps@2:3.3.17-6ubuntu2.1, ncurses/libncursesw6@6.3-2ubuntu0.1, ncurses/libtinfo6@6.3-2ubuntu0.1, ncurses/ncurses-base@6.3-2ubuntu0.1, ncurses/ncurses-bin@6.3-2ubuntu0.1
+  From: ncurses/libncurses6@6.3-2ubuntu0.1
+  From: procps@2:3.3.17-6ubuntu2.1 > ncurses/libncurses6@6.3-2ubuntu0.1
+  From: ncurses/libncursesw6@6.3-2ubuntu0.1
+  and 3 more...
+
+✗ Low severity vulnerability found in libzstd/libzstd1
+  Description: Resource Exhaustion
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-LIBZSTD-3368800
+  Introduced through: libzstd/libzstd1@1.4.8+dfsg-3build1
+  From: libzstd/libzstd1@1.4.8+dfsg-3build1
+
+✗ Low severity vulnerability found in krb5/libgssapi-krb5-2
+  Description: Integer Overflow or Wraparound
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-KRB5-2797765
+  Introduced through: krb5/libgssapi-krb5-2@1.19.2-2ubuntu0.4, krb5/libk5crypto3@1.19.2-2ubuntu0.4, krb5/libkrb5-3@1.19.2-2ubuntu0.4, krb5/libkrb5support0@1.19.2-2ubuntu0.4
+  From: krb5/libgssapi-krb5-2@1.19.2-2ubuntu0.4
+  From: krb5/libk5crypto3@1.19.2-2ubuntu0.4
+  From: krb5/libkrb5-3@1.19.2-2ubuntu0.4
+  and 1 more...
+
+✗ Low severity vulnerability found in krb5/libgssapi-krb5-2
+  Description: CVE-2024-26461
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-KRB5-6281067
+  Introduced through: krb5/libgssapi-krb5-2@1.19.2-2ubuntu0.4, krb5/libk5crypto3@1.19.2-2ubuntu0.4, krb5/libkrb5-3@1.19.2-2ubuntu0.4, krb5/libkrb5support0@1.19.2-2ubuntu0.4
+  From: krb5/libgssapi-krb5-2@1.19.2-2ubuntu0.4
+  From: krb5/libk5crypto3@1.19.2-2ubuntu0.4
+  From: krb5/libkrb5-3@1.19.2-2ubuntu0.4
+  and 1 more...
+
+✗ Low severity vulnerability found in krb5/libgssapi-krb5-2
+  Description: CVE-2024-26458
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-KRB5-6281079
+  Introduced through: krb5/libgssapi-krb5-2@1.19.2-2ubuntu0.4, krb5/libk5crypto3@1.19.2-2ubuntu0.4, krb5/libkrb5-3@1.19.2-2ubuntu0.4, krb5/libkrb5support0@1.19.2-2ubuntu0.4
+  From: krb5/libgssapi-krb5-2@1.19.2-2ubuntu0.4
+  From: krb5/libk5crypto3@1.19.2-2ubuntu0.4
+  From: krb5/libkrb5-3@1.19.2-2ubuntu0.4
+  and 1 more...
+
+✗ Low severity vulnerability found in gnupg2/gpgv
+  Description: Out-of-bounds Write
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-GNUPG2-3035409
+  Introduced through: gnupg2/gpgv@2.2.27-3ubuntu2.1, apt@2.4.12, gnupg2/gnupg@2.2.27-3ubuntu2.1, gnupg2/dirmngr@2.2.27-3ubuntu2.1, software-properties/software-properties-common@0.99.22.9, gnupg2/gnupg-l10n@2.2.27-3ubuntu2.1, gnupg2/gnupg-utils@2.2.27-3ubuntu2.1, gnupg2/gpg-agent@2.2.27-3ubuntu2.1, gnupg2/gpg-wks-client@2.2.27-3ubuntu2.1, gnupg2/gpg-wks-server@2.2.27-3ubuntu2.1, gnupg2/gpgsm@2.2.27-3ubuntu2.1
+  From: gnupg2/gpgv@2.2.27-3ubuntu2.1
+  From: apt@2.4.12 > gnupg2/gpgv@2.2.27-3ubuntu2.1
+  From: gnupg2/gnupg@2.2.27-3ubuntu2.1 > gnupg2/gpgv@2.2.27-3ubuntu2.1
+  and 26 more...
+
+✗ Low severity vulnerability found in glibc/libc-bin
+  Description: Allocation of Resources Without Limits or Throttling
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-GLIBC-2801292
+  Introduced through: glibc/libc-bin@2.35-0ubuntu3.8, glibc/libc6@2.35-0ubuntu3.8
+  From: glibc/libc-bin@2.35-0ubuntu3.8
+  From: glibc/libc6@2.35-0ubuntu3.8
+
+✗ Low severity vulnerability found in gcc-12/gcc-12-base
+  Description: Uncontrolled Recursion
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-GCC12-5861847
+  Introduced through: gcc-12/gcc-12-base@12.3.0-1ubuntu1~22.04, gcc-12/libgcc-s1@12.3.0-1ubuntu1~22.04, gcc-12/libstdc++6@12.3.0-1ubuntu1~22.04
+  From: gcc-12/gcc-12-base@12.3.0-1ubuntu1~22.04
+  From: gcc-12/libgcc-s1@12.3.0-1ubuntu1~22.04
+  From: gcc-12/libstdc++6@12.3.0-1ubuntu1~22.04
+
+✗ Low severity vulnerability found in dbus/libdbus-1-3
+  Description: CVE-2023-34969
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-DBUS-5673213
+  Introduced through: software-properties/software-properties-common@0.99.22.9, firefox@1:1snap1-0ubuntu2, networkd-dispatcher@2.1-2ubuntu0.22.04.2
+  From: software-properties/software-properties-common@0.99.22.9 > dbus-python/python3-dbus@1.2.18-3build1 > dbus/libdbus-1-3@1.12.20-2ubuntu4.1
+  From: firefox@1:1snap1-0ubuntu2 > snapd@2.63+22.04ubuntu0.1 > dbus/dbus-user-session@1.12.20-2ubuntu4.1 > dbus@1.12.20-2ubuntu4.1 > dbus/libdbus-1-3@1.12.20-2ubuntu4.1
+  From: networkd-dispatcher@2.1-2ubuntu0.22.04.2 > dbus@1.12.20-2ubuntu4.1
+  and 5 more...
+  Image layer: 'apt-get install -y firefox'
+
+✗ Low severity vulnerability found in coreutils
+  Description: Improper Input Validation
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-COREUTILS-2801226
+  Introduced through: coreutils@8.32-4.1ubuntu1.2, ucf@3.0043
+  From: coreutils@8.32-4.1ubuntu1.2
+  From: ucf@3.0043 > coreutils@8.32-4.1ubuntu1.2
+
+✗ Medium severity vulnerability found in setuptools/python3-pkg-resources
+  Description: Arbitrary Code Injection
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-SETUPTOOLS-7459751
+  Introduced through: software-properties/software-properties-common@0.99.22.9
+  From: software-properties/software-properties-common@0.99.22.9 > software-properties/python3-software-properties@0.99.22.9 > python-launchpadlib/python3-launchpadlib@1.10.16-1 > lazr.restfulclient/python3-lazr.restfulclient@0.14.4-1 > setuptools/python3-pkg-resources@59.6.0-1.2ubuntu0.22.04.1
+  From: software-properties/software-properties-common@0.99.22.9 > software-properties/python3-software-properties@0.99.22.9 > python-launchpadlib/python3-launchpadlib@1.10.16-1 > lazr.restfulclient/python3-lazr.restfulclient@0.14.4-1 > lazr.uri/python3-lazr.uri@1.0.6-2 > setuptools/python3-pkg-resources@59.6.0-1.2ubuntu0.22.04.1
+  From: software-properties/software-properties-common@0.99.22.9 > software-properties/python3-software-properties@0.99.22.9 > python-launchpadlib/python3-launchpadlib@1.10.16-1 > lazr.restfulclient/python3-lazr.restfulclient@0.14.4-1 > python-wadllib/python3-wadllib@1.3.6-1 > setuptools/python3-pkg-resources@59.6.0-1.2ubuntu0.22.04.1
+  Fixed in: 59.6.0-1.2ubuntu0.22.04.2
+
+✗ Medium severity vulnerability found in python3.10/libpython3.10-minimal
+  Description: Improper Input Validation
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-PYTHON310-5438716
+  Introduced through: python3.10/libpython3.10-minimal@3.10.12-1~22.04.5, python3.10/libpython3.10-stdlib@3.10.12-1~22.04.5, python3.10/python3.10-minimal@3.10.12-1~22.04.5, software-properties/software-properties-common@0.99.22.9
+  From: python3.10/libpython3.10-minimal@3.10.12-1~22.04.5
+  From: python3.10/libpython3.10-stdlib@3.10.12-1~22.04.5
+  From: python3.10/python3.10-minimal@3.10.12-1~22.04.5
+  and 1 more...
+  Fixed in: 3.10.12-1~22.04.6
+
+✗ Medium severity vulnerability found in python3.10/libpython3.10-minimal
+  Description: CVE-2024-6923
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-PYTHON310-7577352
+  Introduced through: python3.10/libpython3.10-minimal@3.10.12-1~22.04.5, python3.10/libpython3.10-stdlib@3.10.12-1~22.04.5, python3.10/python3.10-minimal@3.10.12-1~22.04.5, software-properties/software-properties-common@0.99.22.9
+  From: python3.10/libpython3.10-minimal@3.10.12-1~22.04.5
+  From: python3.10/libpython3.10-stdlib@3.10.12-1~22.04.5
+  From: python3.10/python3.10-minimal@3.10.12-1~22.04.5
+  and 1 more...
+  Fixed in: 3.10.12-1~22.04.6
+
+✗ Medium severity vulnerability found in python3.10/libpython3.10-minimal
+  Description: CVE-2024-8088
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-PYTHON310-7830061
+  Introduced through: python3.10/libpython3.10-minimal@3.10.12-1~22.04.5, python3.10/libpython3.10-stdlib@3.10.12-1~22.04.5, python3.10/python3.10-minimal@3.10.12-1~22.04.5, software-properties/software-properties-common@0.99.22.9
+  From: python3.10/libpython3.10-minimal@3.10.12-1~22.04.5
+  From: python3.10/libpython3.10-stdlib@3.10.12-1~22.04.5
+  From: python3.10/python3.10-minimal@3.10.12-1~22.04.5
+  and 1 more...
+  Fixed in: 3.10.12-1~22.04.6
+
+✗ Medium severity vulnerability found in python3.10/libpython3.10-minimal
+  Description: Inefficient Regular Expression Complexity
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-PYTHON310-7922967
+  Introduced through: python3.10/libpython3.10-minimal@3.10.12-1~22.04.5, python3.10/libpython3.10-stdlib@3.10.12-1~22.04.5, python3.10/python3.10-minimal@3.10.12-1~22.04.5, software-properties/software-properties-common@0.99.22.9
+  From: python3.10/libpython3.10-minimal@3.10.12-1~22.04.5
+  From: python3.10/libpython3.10-stdlib@3.10.12-1~22.04.5
+  From: python3.10/python3.10-minimal@3.10.12-1~22.04.5
+  and 1 more...
+  Fixed in: 3.10.12-1~22.04.6
+
+✗ Medium severity vulnerability found in openssl/libssl3
+  Description: CVE-2024-6119
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-OPENSSL-7886354
+  Introduced through: openssl/libssl3@3.0.2-0ubuntu1.17
+  From: openssl/libssl3@3.0.2-0ubuntu1.17
+  Image layer: 'apt-get install -y firefox'
+  Fixed in: 3.0.2-0ubuntu1.18
+
+✗ Medium severity vulnerability found in openssl
+  Description: CVE-2024-41996
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-OPENSSL-7838287
+  Introduced through: firefox@1:1snap1-0ubuntu2, openssl/libssl3@3.0.2-0ubuntu1.17
+  From: firefox@1:1snap1-0ubuntu2 > snapd@2.63+22.04ubuntu0.1 > ca-certificates@20230311ubuntu0.22.04.1 > openssl@3.0.2-0ubuntu1.18
+  From: openssl/libssl3@3.0.2-0ubuntu1.17
+  Image layer: 'apt-get install -y firefox'
+
+✗ Medium severity vulnerability found in libgcrypt20
+  Description: Information Exposure
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-LIBGCRYPT20-6411451
+  Introduced through: libgcrypt20@1.9.4-3ubuntu3
+  From: libgcrypt20@1.9.4-3ubuntu3
+
+✗ Medium severity vulnerability found in krb5/libgssapi-krb5-2
+  Description: CVE-2024-26462
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-KRB5-6281073
+  Introduced through: krb5/libgssapi-krb5-2@1.19.2-2ubuntu0.4, krb5/libk5crypto3@1.19.2-2ubuntu0.4, krb5/libkrb5-3@1.19.2-2ubuntu0.4, krb5/libkrb5support0@1.19.2-2ubuntu0.4
+  From: krb5/libgssapi-krb5-2@1.19.2-2ubuntu0.4
+  From: krb5/libk5crypto3@1.19.2-2ubuntu0.4
+  From: krb5/libkrb5-3@1.19.2-2ubuntu0.4
+  and 1 more...
+
+✗ Medium severity vulnerability found in gcc-12/gcc-12-base
+  Description: CVE-2023-4039
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-GCC12-5893601
+  Introduced through: gcc-12/gcc-12-base@12.3.0-1ubuntu1~22.04, gcc-12/libgcc-s1@12.3.0-1ubuntu1~22.04, gcc-12/libstdc++6@12.3.0-1ubuntu1~22.04
+  From: gcc-12/gcc-12-base@12.3.0-1ubuntu1~22.04
+  From: gcc-12/libgcc-s1@12.3.0-1ubuntu1~22.04
+  From: gcc-12/libstdc++6@12.3.0-1ubuntu1~22.04
+
+✗ Medium severity vulnerability found in expat/libexpat1
+  Description: Integer Overflow or Wraparound
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-EXPAT-7885369
+  Introduced through: expat/libexpat1@2.4.7-1ubuntu0.3
+  From: expat/libexpat1@2.4.7-1ubuntu0.3
+  Fixed in: 2.4.7-1ubuntu0.4
+
+✗ Medium severity vulnerability found in expat/libexpat1
+  Description: XML External Entity (XXE) Injection
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-EXPAT-7885479
+  Introduced through: expat/libexpat1@2.4.7-1ubuntu0.3
+  From: expat/libexpat1@2.4.7-1ubuntu0.3
+  Fixed in: 2.4.7-1ubuntu0.4
+
+✗ Medium severity vulnerability found in expat/libexpat1
+  Description: Integer Overflow or Wraparound
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-EXPAT-7885572
+  Introduced through: expat/libexpat1@2.4.7-1ubuntu0.3
+  From: expat/libexpat1@2.4.7-1ubuntu0.3
+  Fixed in: 2.4.7-1ubuntu0.4
+
+✗ Medium severity vulnerability found in curl/libcurl3-gnutls
+  Description: CVE-2024-8096
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-CURL-7931918
+  Introduced through: software-properties/software-properties-common@0.99.22.9
+  From: software-properties/software-properties-common@0.99.22.9 > packagekit@1.2.5-2ubuntu2 > appstream/libappstream4@0.15.2-2 > curl/libcurl3-gnutls@7.81.0-1ubuntu1.17
+  Fixed in: 7.81.0-1ubuntu1.18
+
+✗ Medium severity vulnerability found in apparmor/libapparmor1
+  Description: Security Features
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-APPARMOR-2793406
+  Introduced through: apparmor/libapparmor1@3.0.4-2ubuntu2.3build2, firefox@1:1snap1-0ubuntu2
+  From: apparmor/libapparmor1@3.0.4-2ubuntu2.3build2
+  From: firefox@1:1snap1-0ubuntu2 > snapd@2.63+22.04ubuntu0.1 > apparmor@3.0.4-2ubuntu2.3build2
+  Image layer: 'apt-get install -y firefox'
+  Fixed in: 3.0.4-2ubuntu2.4
+
+
+
+Organization:      joshua.woods
+Package manager:   deb
+Project name:      docker-image|76588
+Docker image:      76588:latest
+Platform:          linux/arm64
+Licenses:          enabled
+
+Tested 243 dependencies for known issues, found 34 issues.
+
+Snyk wasn’t able to auto detect the base image, use `--file` option to get base image remediation advice.
+Example: $ snyk container test 76588:latest --file=path/to/Dockerfile
+
+To remove this message in the future, please run `snyk config set disableSuggestions=true`
+
+-------------------------------------------------------
+
+Testing 76588:latest...
+
+Organization:      joshua.woods
+Package manager:   gomodules
+Target file:       /usr/lib/snapd/snap-exec
+Project name:      github.com/snapcore/snapd
+Docker image:      76588:latest
+Licenses:          enabled
+
+✔ Tested 11 dependencies for known issues, no vulnerable paths found.
+
+-------------------------------------------------------
+
+Testing 76588:latest...
+
+Organization:      joshua.woods
+Package manager:   gomodules
+Target file:       /usr/lib/snapd/snap-seccomp
+Project name:      github.com/snapcore/snapd
+Docker image:      76588:latest
+Licenses:          enabled
+
+✔ Tested 4 dependencies for known issues, no vulnerable paths found.
+
+-------------------------------------------------------
+
+Testing 76588:latest...
+
+Organization:      joshua.woods
+Package manager:   gomodules
+Target file:       /usr/lib/snapd/snap-update-ns
+Project name:      github.com/snapcore/snapd
+Docker image:      76588:latest
+Licenses:          enabled
+
+✔ Tested 11 dependencies for known issues, no vulnerable paths found.
+
+-------------------------------------------------------
+
+Testing 76588:latest...
+
+✗ Medium severity issue found in gopkg.in/retry.v1
+  Description: LGPL-3.0 license
+  Info: https://snyk.io/vuln/snyk:lic:golang:gopkg.in:retry.v1:LGPL-3.0
+  Introduced through: gopkg.in/retry.v1@v1.0.3
+  From: gopkg.in/retry.v1@v1.0.3
+
+✗ Medium severity issue found in github.com/canonical/go-efilib
+  Description: LGPL-3.0 license
+  Info: https://snyk.io/vuln/snyk:lic:golang:github.com:canonical:go-efilib:LGPL-3.0
+  Introduced through: github.com/canonical/go-efilib@v0.3.1-0.20220815143333-7e5151412e93, github.com/canonical/go-efilib/internal/uefi@v0.3.1-0.20220815143333-7e5151412e93, github.com/canonical/go-efilib/mbr@v0.3.1-0.20220815143333-7e5151412e93
+  From: github.com/canonical/go-efilib@v0.3.1-0.20220815143333-7e5151412e93
+  From: github.com/canonical/go-efilib/internal/uefi@v0.3.1-0.20220815143333-7e5151412e93
+  From: github.com/canonical/go-efilib/mbr@v0.3.1-0.20220815143333-7e5151412e93
+
+
+
+Organization:      joshua.woods
+Package manager:   gomodules
+Target file:       /usr/lib/snapd/snapctl
+Project name:      github.com/snapcore/snapd
+Docker image:      76588:latest
+Licenses:          enabled
+
+Tested 25 dependencies for known issues, found 2 issues.
+
+Snyk wasn’t able to auto detect the base image, use `--file` option to get base image remediation advice.
+Example: $ snyk container test 76588:latest --file=path/to/Dockerfile
+
+Snyk found some vulnerabilities in your image applications (Snyk searches for these vulnerabilities by default). See https://snyk.co/app-vulns for more information.
+
+To remove these messages in the future, please run `snyk config set disableSuggestions=true`
+
+
+Tested 5 projects, 2 contained vulnerable paths.
+
+
+
+joshua@Joshuas-MBP terraform-goof % snyk container monitor 76588:latest --platform=linux/arm64 --exclude-base-image-vulns
+
+Monitoring 76588:latest (docker-image|76588)...
+
+Explore this snapshot at https://app.snyk.io/org/joshua.woods/project/7638ad9c-9a6d-439e-958f-04ea0f22d91d/history/85d26a80-2c35-4365-95c4-818f7575fb46
+
+Notifications about newly disclosed issues related to these dependencies will be emailed to you.
+
+
+-------------------------------------------------------
+
+Monitoring 76588:latest (docker-image|76588:/usr/lib/snapd/snap-exec)...
+
+Explore this snapshot at https://app.snyk.io/org/joshua.woods/project/0dc7f211-6cb9-4bea-8402-cc7d701d719b/history/49b76f95-edc5-4b48-9bfa-8400da8f4660
+
+Notifications about newly disclosed issues related to these dependencies will be emailed to you.
+
+
+-------------------------------------------------------
+
+Monitoring 76588:latest (docker-image|76588:/usr/lib/snapd/snap-seccomp)...
+
+Explore this snapshot at https://app.snyk.io/org/joshua.woods/project/acc56d83-e0fd-4429-a479-6ff003f15f61/history/ae0258b2-fae0-48d7-8136-cfedcda77f5d
+
+Notifications about newly disclosed issues related to these dependencies will be emailed to you.
+
+
+-------------------------------------------------------
+
+Monitoring 76588:latest (docker-image|76588:/usr/lib/snapd/snap-update-ns)...
+
+Explore this snapshot at https://app.snyk.io/org/joshua.woods/project/a447dc35-30e0-4b3e-bad5-1abb993079c7/history/96569a7f-c285-4aa0-a6b5-32cbf9a1cc43
+
+Notifications about newly disclosed issues related to these dependencies will be emailed to you.
+
+
+-------------------------------------------------------
+
+Monitoring 76588:latest (docker-image|76588:/usr/lib/snapd/snapctl)...
+
+Explore this snapshot at https://app.snyk.io/org/joshua.woods/project/a8e3206d-d091-4fe4-935e-62758f49b8ee/history/15fef54a-4502-4440-b4fb-a59fc7118040
+
+Notifications about newly disclosed issues related to these dependencies will be emailed to you.
+
+joshua@Joshuas-MBP terraform-goof % snyk container test 76588:latest --platform=linux/arm64 --exclude-base-image-vulns   
+
+Testing 76588:latest...
+
+✗ Low severity vulnerability found in systemd
+  Description: CVE-2023-7008
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-SYSTEMD-6137855
+  Introduced through: systemd/libnss-systemd@249.11-0ubuntu3.12, systemd/systemd-timesyncd@249.11-0ubuntu3.12, firefox@1:1snap1-0ubuntu2, software-properties/software-properties-common@0.99.22.9, systemd-hwe/systemd-hwe-hwdb@249.11.5, systemd/libsystemd0@249.11-0ubuntu3.12, systemd/libudev1@249.11-0ubuntu3.12
+  From: systemd/libnss-systemd@249.11-0ubuntu3.12 > systemd@249.11-0ubuntu3.12
+  From: systemd/systemd-timesyncd@249.11-0ubuntu3.12 > systemd@249.11-0ubuntu3.12
+  From: firefox@1:1snap1-0ubuntu2 > snapd@2.63+22.04ubuntu0.1 > systemd@249.11-0ubuntu3.12
+  and 12 more...
+  Image layer: 'apt-get install -y firefox'
+
+✗ Low severity vulnerability found in snapd
+  Description: CVE-2024-5138
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-SNAPD-7173523
+  Introduced through: firefox@1:1snap1-0ubuntu2
+  From: firefox@1:1snap1-0ubuntu2 > snapd@2.63+22.04ubuntu0.1
+  Image layer: 'apt-get install -y firefox'
+
+✗ Low severity vulnerability found in shadow/login
+  Description: Arbitrary Code Injection
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-SHADOW-5425688
+  Introduced through: shadow/login@1:4.8.1-2ubuntu2.2, shadow/passwd@1:4.8.1-2ubuntu2.2
+  From: shadow/login@1:4.8.1-2ubuntu2.2
+  From: shadow/passwd@1:4.8.1-2ubuntu2.2
+
+✗ Low severity vulnerability found in python3.10/libpython3.10-minimal
+  Description: Inefficient Regular Expression Complexity
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-PYTHON310-7830347
+  Introduced through: python3.10/libpython3.10-minimal@3.10.12-1~22.04.5, python3.10/libpython3.10-stdlib@3.10.12-1~22.04.5, python3.10/python3.10-minimal@3.10.12-1~22.04.5, software-properties/software-properties-common@0.99.22.9
+  From: python3.10/libpython3.10-minimal@3.10.12-1~22.04.5
+  From: python3.10/libpython3.10-stdlib@3.10.12-1~22.04.5
+  From: python3.10/python3.10-minimal@3.10.12-1~22.04.5
+  and 1 more...
+  Fixed in: 3.10.12-1~22.04.6
+
+✗ Low severity vulnerability found in python-httplib2/python3-httplib2
+  Description: Resource Exhaustion
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-PYTHONHTTPLIB2-2784078
+  Introduced through: software-properties/software-properties-common@0.99.22.9
+  From: software-properties/software-properties-common@0.99.22.9 > software-properties/python3-software-properties@0.99.22.9 > python-launchpadlib/python3-launchpadlib@1.10.16-1 > python-httplib2/python3-httplib2@0.20.2-2
+  From: software-properties/software-properties-common@0.99.22.9 > software-properties/python3-software-properties@0.99.22.9 > python-launchpadlib/python3-launchpadlib@1.10.16-1 > lazr.restfulclient/python3-lazr.restfulclient@0.14.4-1 > python-httplib2/python3-httplib2@0.20.2-2
+
+✗ Low severity vulnerability found in policykit-1/libpolkit-agent-1-0
+  Description: Improper Encoding or Escaping of Output
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-POLICYKIT1-2794742
+  Introduced through: software-properties/software-properties-common@0.99.22.9
+  From: software-properties/software-properties-common@0.99.22.9 > packagekit@1.2.5-2ubuntu2 > policykit-1@0.105-33 > policykit-1/pkexec@0.105-33 > policykit-1/libpolkit-agent-1-0@0.105-33
+  From: software-properties/software-properties-common@0.99.22.9 > packagekit@1.2.5-2ubuntu2 > policykit-1@0.105-33 > policykit-1/pkexec@0.105-33 > policykit-1/polkitd@0.105-33 > policykit-1/libpolkit-agent-1-0@0.105-33
+  From: software-properties/software-properties-common@0.99.22.9 > packagekit@1.2.5-2ubuntu2 > policykit-1/libpolkit-gobject-1-0@0.105-33
+  and 7 more...
+
+✗ Low severity vulnerability found in pcre3/libpcre3
+  Description: Uncontrolled Recursion
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-PCRE3-2799820
+  Introduced through: pcre3/libpcre3@2:8.39-13ubuntu0.22.04.1
+  From: pcre3/libpcre3@2:8.39-13ubuntu0.22.04.1
+
+✗ Low severity vulnerability found in pcre2/libpcre2-8-0
+  Description: Integer Overflow or Wraparound
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-PCRE2-5787133
+  Introduced through: pcre2/libpcre2-8-0@10.39-3ubuntu0.1
+  From: pcre2/libpcre2-8-0@10.39-3ubuntu0.1
+
+✗ Low severity vulnerability found in ncurses/libncurses6
+  Description: CVE-2023-50495
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-NCURSES-6123867
+  Introduced through: ncurses/libncurses6@6.3-2ubuntu0.1, procps@2:3.3.17-6ubuntu2.1, ncurses/libncursesw6@6.3-2ubuntu0.1, ncurses/libtinfo6@6.3-2ubuntu0.1, ncurses/ncurses-base@6.3-2ubuntu0.1, ncurses/ncurses-bin@6.3-2ubuntu0.1
+  From: ncurses/libncurses6@6.3-2ubuntu0.1
+  From: procps@2:3.3.17-6ubuntu2.1 > ncurses/libncurses6@6.3-2ubuntu0.1
+  From: ncurses/libncursesw6@6.3-2ubuntu0.1
+  and 3 more...
+
+✗ Low severity vulnerability found in ncurses/libncurses6
+  Description: CVE-2023-45918
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-NCURSES-6253015
+  Introduced through: ncurses/libncurses6@6.3-2ubuntu0.1, procps@2:3.3.17-6ubuntu2.1, ncurses/libncursesw6@6.3-2ubuntu0.1, ncurses/libtinfo6@6.3-2ubuntu0.1, ncurses/ncurses-base@6.3-2ubuntu0.1, ncurses/ncurses-bin@6.3-2ubuntu0.1
+  From: ncurses/libncurses6@6.3-2ubuntu0.1
+  From: procps@2:3.3.17-6ubuntu2.1 > ncurses/libncurses6@6.3-2ubuntu0.1
+  From: ncurses/libncursesw6@6.3-2ubuntu0.1
+  and 3 more...
+
+✗ Low severity vulnerability found in libzstd/libzstd1
+  Description: Resource Exhaustion
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-LIBZSTD-3368800
+  Introduced through: libzstd/libzstd1@1.4.8+dfsg-3build1
+  From: libzstd/libzstd1@1.4.8+dfsg-3build1
+
+✗ Low severity vulnerability found in krb5/libgssapi-krb5-2
+  Description: Integer Overflow or Wraparound
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-KRB5-2797765
+  Introduced through: krb5/libgssapi-krb5-2@1.19.2-2ubuntu0.4, krb5/libk5crypto3@1.19.2-2ubuntu0.4, krb5/libkrb5-3@1.19.2-2ubuntu0.4, krb5/libkrb5support0@1.19.2-2ubuntu0.4
+  From: krb5/libgssapi-krb5-2@1.19.2-2ubuntu0.4
+  From: krb5/libk5crypto3@1.19.2-2ubuntu0.4
+  From: krb5/libkrb5-3@1.19.2-2ubuntu0.4
+  and 1 more...
+
+✗ Low severity vulnerability found in krb5/libgssapi-krb5-2
+  Description: CVE-2024-26461
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-KRB5-6281067
+  Introduced through: krb5/libgssapi-krb5-2@1.19.2-2ubuntu0.4, krb5/libk5crypto3@1.19.2-2ubuntu0.4, krb5/libkrb5-3@1.19.2-2ubuntu0.4, krb5/libkrb5support0@1.19.2-2ubuntu0.4
+  From: krb5/libgssapi-krb5-2@1.19.2-2ubuntu0.4
+  From: krb5/libk5crypto3@1.19.2-2ubuntu0.4
+  From: krb5/libkrb5-3@1.19.2-2ubuntu0.4
+  and 1 more...
+
+✗ Low severity vulnerability found in krb5/libgssapi-krb5-2
+  Description: CVE-2024-26458
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-KRB5-6281079
+  Introduced through: krb5/libgssapi-krb5-2@1.19.2-2ubuntu0.4, krb5/libk5crypto3@1.19.2-2ubuntu0.4, krb5/libkrb5-3@1.19.2-2ubuntu0.4, krb5/libkrb5support0@1.19.2-2ubuntu0.4
+  From: krb5/libgssapi-krb5-2@1.19.2-2ubuntu0.4
+  From: krb5/libk5crypto3@1.19.2-2ubuntu0.4
+  From: krb5/libkrb5-3@1.19.2-2ubuntu0.4
+  and 1 more...
+
+✗ Low severity vulnerability found in gnupg2/gpgv
+  Description: Out-of-bounds Write
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-GNUPG2-3035409
+  Introduced through: gnupg2/gpgv@2.2.27-3ubuntu2.1, apt@2.4.12, gnupg2/gnupg@2.2.27-3ubuntu2.1, gnupg2/dirmngr@2.2.27-3ubuntu2.1, software-properties/software-properties-common@0.99.22.9, gnupg2/gnupg-l10n@2.2.27-3ubuntu2.1, gnupg2/gnupg-utils@2.2.27-3ubuntu2.1, gnupg2/gpg-agent@2.2.27-3ubuntu2.1, gnupg2/gpg-wks-client@2.2.27-3ubuntu2.1, gnupg2/gpg-wks-server@2.2.27-3ubuntu2.1, gnupg2/gpgsm@2.2.27-3ubuntu2.1
+  From: gnupg2/gpgv@2.2.27-3ubuntu2.1
+  From: apt@2.4.12 > gnupg2/gpgv@2.2.27-3ubuntu2.1
+  From: gnupg2/gnupg@2.2.27-3ubuntu2.1 > gnupg2/gpgv@2.2.27-3ubuntu2.1
+  and 26 more...
+
+✗ Low severity vulnerability found in glibc/libc-bin
+  Description: Allocation of Resources Without Limits or Throttling
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-GLIBC-2801292
+  Introduced through: glibc/libc-bin@2.35-0ubuntu3.8, glibc/libc6@2.35-0ubuntu3.8
+  From: glibc/libc-bin@2.35-0ubuntu3.8
+  From: glibc/libc6@2.35-0ubuntu3.8
+
+✗ Low severity vulnerability found in gcc-12/gcc-12-base
+  Description: Uncontrolled Recursion
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-GCC12-5861847
+  Introduced through: gcc-12/gcc-12-base@12.3.0-1ubuntu1~22.04, gcc-12/libgcc-s1@12.3.0-1ubuntu1~22.04, gcc-12/libstdc++6@12.3.0-1ubuntu1~22.04
+  From: gcc-12/gcc-12-base@12.3.0-1ubuntu1~22.04
+  From: gcc-12/libgcc-s1@12.3.0-1ubuntu1~22.04
+  From: gcc-12/libstdc++6@12.3.0-1ubuntu1~22.04
+
+✗ Low severity vulnerability found in dbus/libdbus-1-3
+  Description: CVE-2023-34969
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-DBUS-5673213
+  Introduced through: software-properties/software-properties-common@0.99.22.9, firefox@1:1snap1-0ubuntu2, networkd-dispatcher@2.1-2ubuntu0.22.04.2
+  From: software-properties/software-properties-common@0.99.22.9 > dbus-python/python3-dbus@1.2.18-3build1 > dbus/libdbus-1-3@1.12.20-2ubuntu4.1
+  From: firefox@1:1snap1-0ubuntu2 > snapd@2.63+22.04ubuntu0.1 > dbus/dbus-user-session@1.12.20-2ubuntu4.1 > dbus@1.12.20-2ubuntu4.1 > dbus/libdbus-1-3@1.12.20-2ubuntu4.1
+  From: networkd-dispatcher@2.1-2ubuntu0.22.04.2 > dbus@1.12.20-2ubuntu4.1
+  and 5 more...
+  Image layer: 'apt-get install -y firefox'
+
+✗ Low severity vulnerability found in coreutils
+  Description: Improper Input Validation
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-COREUTILS-2801226
+  Introduced through: coreutils@8.32-4.1ubuntu1.2, ucf@3.0043
+  From: coreutils@8.32-4.1ubuntu1.2
+  From: ucf@3.0043 > coreutils@8.32-4.1ubuntu1.2
+
+✗ Medium severity vulnerability found in setuptools/python3-pkg-resources
+  Description: Arbitrary Code Injection
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-SETUPTOOLS-7459751
+  Introduced through: software-properties/software-properties-common@0.99.22.9
+  From: software-properties/software-properties-common@0.99.22.9 > software-properties/python3-software-properties@0.99.22.9 > python-launchpadlib/python3-launchpadlib@1.10.16-1 > lazr.restfulclient/python3-lazr.restfulclient@0.14.4-1 > setuptools/python3-pkg-resources@59.6.0-1.2ubuntu0.22.04.1
+  From: software-properties/software-properties-common@0.99.22.9 > software-properties/python3-software-properties@0.99.22.9 > python-launchpadlib/python3-launchpadlib@1.10.16-1 > lazr.restfulclient/python3-lazr.restfulclient@0.14.4-1 > lazr.uri/python3-lazr.uri@1.0.6-2 > setuptools/python3-pkg-resources@59.6.0-1.2ubuntu0.22.04.1
+  From: software-properties/software-properties-common@0.99.22.9 > software-properties/python3-software-properties@0.99.22.9 > python-launchpadlib/python3-launchpadlib@1.10.16-1 > lazr.restfulclient/python3-lazr.restfulclient@0.14.4-1 > python-wadllib/python3-wadllib@1.3.6-1 > setuptools/python3-pkg-resources@59.6.0-1.2ubuntu0.22.04.1
+  Fixed in: 59.6.0-1.2ubuntu0.22.04.2
+
+✗ Medium severity vulnerability found in python3.10/libpython3.10-minimal
+  Description: Improper Input Validation
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-PYTHON310-5438716
+  Introduced through: python3.10/libpython3.10-minimal@3.10.12-1~22.04.5, python3.10/libpython3.10-stdlib@3.10.12-1~22.04.5, python3.10/python3.10-minimal@3.10.12-1~22.04.5, software-properties/software-properties-common@0.99.22.9
+  From: python3.10/libpython3.10-minimal@3.10.12-1~22.04.5
+  From: python3.10/libpython3.10-stdlib@3.10.12-1~22.04.5
+  From: python3.10/python3.10-minimal@3.10.12-1~22.04.5
+  and 1 more...
+  Fixed in: 3.10.12-1~22.04.6
+
+✗ Medium severity vulnerability found in python3.10/libpython3.10-minimal
+  Description: CVE-2024-6923
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-PYTHON310-7577352
+  Introduced through: python3.10/libpython3.10-minimal@3.10.12-1~22.04.5, python3.10/libpython3.10-stdlib@3.10.12-1~22.04.5, python3.10/python3.10-minimal@3.10.12-1~22.04.5, software-properties/software-properties-common@0.99.22.9
+  From: python3.10/libpython3.10-minimal@3.10.12-1~22.04.5
+  From: python3.10/libpython3.10-stdlib@3.10.12-1~22.04.5
+  From: python3.10/python3.10-minimal@3.10.12-1~22.04.5
+  and 1 more...
+  Fixed in: 3.10.12-1~22.04.6
+
+✗ Medium severity vulnerability found in python3.10/libpython3.10-minimal
+  Description: CVE-2024-8088
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-PYTHON310-7830061
+  Introduced through: python3.10/libpython3.10-minimal@3.10.12-1~22.04.5, python3.10/libpython3.10-stdlib@3.10.12-1~22.04.5, python3.10/python3.10-minimal@3.10.12-1~22.04.5, software-properties/software-properties-common@0.99.22.9
+  From: python3.10/libpython3.10-minimal@3.10.12-1~22.04.5
+  From: python3.10/libpython3.10-stdlib@3.10.12-1~22.04.5
+  From: python3.10/python3.10-minimal@3.10.12-1~22.04.5
+  and 1 more...
+  Fixed in: 3.10.12-1~22.04.6
+
+✗ Medium severity vulnerability found in python3.10/libpython3.10-minimal
+  Description: Inefficient Regular Expression Complexity
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-PYTHON310-7922967
+  Introduced through: python3.10/libpython3.10-minimal@3.10.12-1~22.04.5, python3.10/libpython3.10-stdlib@3.10.12-1~22.04.5, python3.10/python3.10-minimal@3.10.12-1~22.04.5, software-properties/software-properties-common@0.99.22.9
+  From: python3.10/libpython3.10-minimal@3.10.12-1~22.04.5
+  From: python3.10/libpython3.10-stdlib@3.10.12-1~22.04.5
+  From: python3.10/python3.10-minimal@3.10.12-1~22.04.5
+  and 1 more...
+  Fixed in: 3.10.12-1~22.04.6
+
+✗ Medium severity vulnerability found in openssl/libssl3
+  Description: CVE-2024-6119
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-OPENSSL-7886354
+  Introduced through: openssl/libssl3@3.0.2-0ubuntu1.17
+  From: openssl/libssl3@3.0.2-0ubuntu1.17
+  Image layer: 'apt-get install -y firefox'
+  Fixed in: 3.0.2-0ubuntu1.18
+
+✗ Medium severity vulnerability found in openssl
+  Description: CVE-2024-41996
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-OPENSSL-7838287
+  Introduced through: firefox@1:1snap1-0ubuntu2, openssl/libssl3@3.0.2-0ubuntu1.17
+  From: firefox@1:1snap1-0ubuntu2 > snapd@2.63+22.04ubuntu0.1 > ca-certificates@20230311ubuntu0.22.04.1 > openssl@3.0.2-0ubuntu1.18
+  From: openssl/libssl3@3.0.2-0ubuntu1.17
+  Image layer: 'apt-get install -y firefox'
+
+✗ Medium severity vulnerability found in libgcrypt20
+  Description: Information Exposure
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-LIBGCRYPT20-6411451
+  Introduced through: libgcrypt20@1.9.4-3ubuntu3
+  From: libgcrypt20@1.9.4-3ubuntu3
+
+✗ Medium severity vulnerability found in krb5/libgssapi-krb5-2
+  Description: CVE-2024-26462
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-KRB5-6281073
+  Introduced through: krb5/libgssapi-krb5-2@1.19.2-2ubuntu0.4, krb5/libk5crypto3@1.19.2-2ubuntu0.4, krb5/libkrb5-3@1.19.2-2ubuntu0.4, krb5/libkrb5support0@1.19.2-2ubuntu0.4
+  From: krb5/libgssapi-krb5-2@1.19.2-2ubuntu0.4
+  From: krb5/libk5crypto3@1.19.2-2ubuntu0.4
+  From: krb5/libkrb5-3@1.19.2-2ubuntu0.4
+  and 1 more...
+
+✗ Medium severity vulnerability found in gcc-12/gcc-12-base
+  Description: CVE-2023-4039
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-GCC12-5893601
+  Introduced through: gcc-12/gcc-12-base@12.3.0-1ubuntu1~22.04, gcc-12/libgcc-s1@12.3.0-1ubuntu1~22.04, gcc-12/libstdc++6@12.3.0-1ubuntu1~22.04
+  From: gcc-12/gcc-12-base@12.3.0-1ubuntu1~22.04
+  From: gcc-12/libgcc-s1@12.3.0-1ubuntu1~22.04
+  From: gcc-12/libstdc++6@12.3.0-1ubuntu1~22.04
+
+✗ Medium severity vulnerability found in expat/libexpat1
+  Description: Integer Overflow or Wraparound
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-EXPAT-7885369
+  Introduced through: expat/libexpat1@2.4.7-1ubuntu0.3
+  From: expat/libexpat1@2.4.7-1ubuntu0.3
+  Fixed in: 2.4.7-1ubuntu0.4
+
+✗ Medium severity vulnerability found in expat/libexpat1
+  Description: XML External Entity (XXE) Injection
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-EXPAT-7885479
+  Introduced through: expat/libexpat1@2.4.7-1ubuntu0.3
+  From: expat/libexpat1@2.4.7-1ubuntu0.3
+  Fixed in: 2.4.7-1ubuntu0.4
+
+✗ Medium severity vulnerability found in expat/libexpat1
+  Description: Integer Overflow or Wraparound
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-EXPAT-7885572
+  Introduced through: expat/libexpat1@2.4.7-1ubuntu0.3
+  From: expat/libexpat1@2.4.7-1ubuntu0.3
+  Fixed in: 2.4.7-1ubuntu0.4
+
+✗ Medium severity vulnerability found in curl/libcurl3-gnutls
+  Description: CVE-2024-8096
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-CURL-7931918
+  Introduced through: software-properties/software-properties-common@0.99.22.9
+  From: software-properties/software-properties-common@0.99.22.9 > packagekit@1.2.5-2ubuntu2 > appstream/libappstream4@0.15.2-2 > curl/libcurl3-gnutls@7.81.0-1ubuntu1.17
+  Fixed in: 7.81.0-1ubuntu1.18
+
+✗ Medium severity vulnerability found in apparmor/libapparmor1
+  Description: Security Features
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-APPARMOR-2793406
+  Introduced through: apparmor/libapparmor1@3.0.4-2ubuntu2.3build2, firefox@1:1snap1-0ubuntu2
+  From: apparmor/libapparmor1@3.0.4-2ubuntu2.3build2
+  From: firefox@1:1snap1-0ubuntu2 > snapd@2.63+22.04ubuntu0.1 > apparmor@3.0.4-2ubuntu2.3build2
+  Image layer: 'apt-get install -y firefox'
+  Fixed in: 3.0.4-2ubuntu2.4
+
+
+
+Organization:      joshua.woods
+Package manager:   deb
+Project name:      docker-image|76588
+Docker image:      76588:latest
+Platform:          linux/arm64
+Licenses:          enabled
+
+Tested 243 dependencies for known issues, found 34 issues.
+
+Snyk wasn’t able to auto detect the base image, use `--file` option to get base image remediation advice.
+Example: $ snyk container test 76588:latest --file=path/to/Dockerfile
+
+To remove this message in the future, please run `snyk config set disableSuggestions=true`
+
+-------------------------------------------------------
+
+Testing 76588:latest...
+
+Organization:      joshua.woods
+Package manager:   gomodules
+Target file:       /usr/lib/snapd/snap-exec
+Project name:      github.com/snapcore/snapd
+Docker image:      76588:latest
+Licenses:          enabled
+
+✔ Tested 11 dependencies for known issues, no vulnerable paths found.
+
+-------------------------------------------------------
+
+Testing 76588:latest...
+
+Organization:      joshua.woods
+Package manager:   gomodules
+Target file:       /usr/lib/snapd/snap-seccomp
+Project name:      github.com/snapcore/snapd
+Docker image:      76588:latest
+Licenses:          enabled
+
+✔ Tested 4 dependencies for known issues, no vulnerable paths found.
+
+-------------------------------------------------------
+
+Testing 76588:latest...
+
+Organization:      joshua.woods
+Package manager:   gomodules
+Target file:       /usr/lib/snapd/snap-update-ns
+Project name:      github.com/snapcore/snapd
+Docker image:      76588:latest
+Licenses:          enabled
+
+✔ Tested 11 dependencies for known issues, no vulnerable paths found.
+
+-------------------------------------------------------
+
+Testing 76588:latest...
+
+✗ Medium severity issue found in gopkg.in/retry.v1
+  Description: LGPL-3.0 license
+  Info: https://snyk.io/vuln/snyk:lic:golang:gopkg.in:retry.v1:LGPL-3.0
+  Introduced through: gopkg.in/retry.v1@v1.0.3
+  From: gopkg.in/retry.v1@v1.0.3
+
+
+
+Organization:      joshua.woods
+Package manager:   gomodules
+Target file:       /usr/lib/snapd/snapctl
+Project name:      github.com/snapcore/snapd
+Docker image:      76588:latest
+Licenses:          enabled
+
+Tested 25 dependencies for known issues, found 1 issue.
+
+Snyk wasn’t able to auto detect the base image, use `--file` option to get base image remediation advice.
+Example: $ snyk container test 76588:latest --file=path/to/Dockerfile
+
+Snyk found some vulnerabilities in your image applications (Snyk searches for these vulnerabilities by default). See https://snyk.co/app-vulns for more information.
+
+To remove these messages in the future, please run `snyk config set disableSuggestions=true`
+
+
+Tested 5 projects, 2 contained vulnerable paths.
